@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors - Elegant Dark Theme */
+    --color-background: #0f0f23; /* Deep sophisticated navy */
+    --color-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-border: #334155; /* Elegant steel blue */
+    --color-input: #1e293b; /* Rich charcoal blue */
+    --color-ring: #8b5cf6; /* Elegant purple focus */
+    --color-card: #1a1b3d; /* Deep card background */
+    --color-card-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-popover: #1e293b; /* Rich charcoal blue */
+    --color-popover-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-muted: #1e293b; /* Rich charcoal blue */
+    --color-muted-foreground: #94a3b8; /* Elegant gray with blue undertone */
+
+    /* Brand Colors - Sophisticated Purple & Blue */
+    --color-primary: #0f0f23; /* Deep sophisticated navy */
+    --color-primary-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-secondary: #1a1b3d; /* Deep card background */
+    --color-secondary-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-accent: #8b5cf6; /* Elegant purple */
+    --color-accent-foreground: #f8fafc; /* Crisp white with slight warmth */
+
+    /* Status Colors - Refined Palette */
+    --color-destructive: #ef4444; /* Clean red */
+    --color-destructive-foreground: #f8fafc; /* Crisp white with slight warmth */
+    --color-success: #10b981; /* Sophisticated emerald */
+    --color-success-foreground: #0f0f23; /* Deep sophisticated navy */
+    --color-warning: #f59e0b; /* Refined amber */
+    --color-warning-foreground: #0f0f23; /* Deep sophisticated navy */
+    --color-error: #ef4444; /* Clean red */
+    --color-error-foreground: #f8fafc; /* Crisp white with slight warmth */
+
+    /* Surface Colors - Enhanced Elegance */
+    --color-surface: #1e293b; /* Rich charcoal blue */
+    --color-text-primary: #f8fafc; /* Crisp white with slight warmth */
+    --color-text-secondary: #94a3b8; /* Elegant gray with blue undertone */
+    --color-cta: #6366f1; /* Refined indigo for calls-to-action */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+  }
+
+  body, p, span, div {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+
+  /* Custom scrollbar for elegant dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-muted);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+
+  /* Focus ring styling */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  /* Smooth transitions for theme-aware elements */
+  .theme-transition {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Holographic effect utility */
+  .holographic {
+    box-shadow: 0 0 20px var(--color-accent), inset 0 0 20px var(--color-success);
+    transform: translateZ(0);
+  }
+
+  /* Breathing animation */
+  .breathing {
+    animation: breathing 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes breathing {
+    from {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+  }
+
+  /* Particle animation base */
+  .particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Glassmorphism utility */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(30, 41, 59, 0.1);
+    border: 1px solid rgba(248, 250, 252, 0.1);
+  }
+
+  /* Depth layers */
+  .depth-layer-1 {
+    transform: translateZ(-10px);
+  }
+
+  .depth-layer-2 {
+    transform: translateZ(0px);
+  }
+
+  .depth-layer-3 {
+    transform: translateZ(10px);
+  }
+
+  .depth-layer-4 {
+    transform: translateZ(20px);
+  }
+
+  .depth-layer-5 {
+    transform: translateZ(30px);
+  }
+}
+
+@layer components {
+  /* Button variants */
+.btn-primary  {
+    @apply bg-primary text-primary-foreground focus-ring;
+  }
+.btn-secondary  {
+    @apply bg-secondary text-secondary-foreground focus-ring;
+  }
+.btn-accent  {
+    @apply bg-accent text-accent-foreground focus-ring;
+  }
+.btn-cta  {
+    @apply bg-[var(--color-cta)] text-white focus-ring;
+  }
+
+  /* Card variants */
+  .card-elevated {
+    @apply bg-card text-card-foreground rounded-lg border shadow-lg;
+    box-shadow: 0 4px 20px rgba(15, 15, 35, 0.4);
+  }
+.card-surface  {
+    @apply bg-surface text-foreground rounded-lg border;
+  }
+
+  /* Text variants - Enhanced gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-success), var(--color-cta));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground transition-colors duration-300 focus-ring rounded-md px-3 py-2;
+  }
+
+  .nav-link-active {
+    @apply text-accent border-b-2 border-accent;
+  }
+
+  /* Form styles */
+.form-input  {
+    @apply bg-input border-border text-foreground placeholder:text-muted-foreground focus:border-accent focus-ring;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 20px var(--color-accent);
+  }
+
+  /* Chromatic aberration effect */
+  .chromatic-hover {
+    @apply transition-all duration-300;
+  }
+
+  .chromatic-hover:hover {
+    filter: contrast(1.1) hue-rotate(5deg) saturate(1.2);
+    transform: translate(2px, -2px);
+  }
+}
+
+@layer utilities {
+  /* Spacing utilities based on 8px grid with golden ratio */
+  .space-xs {
+    @apply space-y-2; /* 8px */
+  }
+
+  .space-sm {
+    @apply space-y-3; /* 13px */
+  }
+
+  .space-md {
+    @apply space-y-5; /* 21px */
+  }
+
+  .space-lg {
+    @apply space-y-8; /* 34px */
+  }
+
+  .space-xl {
+    @apply space-y-14; /* 55px */
+  }
+
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Layout utilities */
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4;
+  }
+
+  /* Performance utilities */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Accessibility utilities */
+  .sr-only-focusable:focus {
+    @apply not-sr-only;
+  }
+
+  /* Brand spacing system */
+  .brand-spacing-xs {
+    @apply p-2; /* 8px */
+  }
+
+  .brand-spacing-sm {
+    @apply p-3; /* 13px */
+  }
+
+  .brand-spacing-md {
+    @apply p-5; /* 21px */
+  }
+
+  .brand-spacing-lg {
+    @apply p-8; /* 34px */
+  }
+
+  .brand-spacing-xl {
+    @apply p-14; /* 55px */
+  }
+}

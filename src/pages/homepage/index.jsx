@@ -49,12 +49,10 @@ const HomepageHeroLanding = () => {
         <footer className="bg-card/30 border-t border-border/20 py-8">
           <div className="container-wide px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground">© {new Date().getFullYear()} Portfolio.</span>
-                <span className="text-muted-foreground">Dibuat dengan</span>
-                <span className="text-accent">REACT</span>
+              <div className="w-full text-center mb-2">
+                <span className="text-muted-foreground">© 2025 Portfolio Dibuat menggunakan React & Tailwind CSS.</span>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 justify-center w-full">
                 <a 
                   href="https://github.com/GedeBrawidya" 
                   target="_blank" 

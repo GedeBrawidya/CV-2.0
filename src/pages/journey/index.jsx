@@ -179,13 +179,6 @@ const ProfessionalJourney = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => window.location.href = '/contact'}
-                className="btn-primary px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-              >
-                <Icon name="MessageCircle" size={20} className="mr-2" />
-                Hubungi Saya
-              </button>
-              <button
                 onClick={() => window.location.href = '/project'}
                 className="btn-secondary px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
@@ -200,16 +193,34 @@ const ProfessionalJourney = () => {
       {/* Footer */}
       <footer className="bg-card border-t border-border/20">
         <div className="container-wide py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-accent to-success rounded-lg flex items-center justify-center">
-                <Icon name="Code2" size={16} color="var(--color-background)" />
-              </div>
-              <span className="text-lg font-bold text-foreground">Portfolio</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Portfolio Dibuat menggunakan React & Tailwind CSS.
-            </p>
+          <div className="w-full text-center mb-2">
+            <span className="text-sm text-muted-foreground">© 2025 Portfolio Dibuat menggunakan React & Tailwind CSS.</span>
+          </div>
+          <div className="flex items-center gap-4 justify-center w-full">
+            <a 
+              href="https://github.com/GedeBrawidya" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/gede-brawidya-puja-dharma-6b4889322/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://instagram.com/_enxyest" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </footer>

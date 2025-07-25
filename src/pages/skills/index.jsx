@@ -482,8 +482,34 @@ const SkillsMatrixTechnicalEcosystem = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="container-wide">
-          <div className="text-center text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} PortfolioHub. Dibuat dengan ❤️ menggunakan React & Next.js</p>
+          <div className="w-full text-center text-muted-foreground mb-2">
+            <span>© 2025 Portfolio Dibuat menggunakan React & Tailwind CSS.</span>
+          </div>
+          <div className="flex items-center gap-4 justify-center w-full">
+            <a 
+              href="https://github.com/GedeBrawidya" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/gede-brawidya-puja-dharma-6b4889322/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://instagram.com/_enxyest" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
+            >
+              Instagram
+            </a>
           </div>
         </div>
       </footer>

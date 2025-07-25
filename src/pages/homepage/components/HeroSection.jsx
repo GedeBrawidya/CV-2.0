@@ -145,7 +145,7 @@ const HeroSection = () => {
                 Lihat Portfolio
               </Button>
             </Link>
-            <Link to="/contact">
+            {/* <Link to="/contact">
               <Button
                 variant="outline"
                 size="lg"
@@ -155,7 +155,7 @@ const HeroSection = () => {
               >
                 Hubungi Saya
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Enhanced Quick Stats */}
@@ -173,8 +173,8 @@ const HeroSection = () => {
               <div className="text-sm text-muted-foreground">Teknologi</div>
             </div>
             <div className="text-center group">
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 group-hover:scale-110 transition-transform duration-300">cursor</div>
-              <div className="text-sm text-muted-foreground">assistant</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent mb-1 group-hover:scale-110 transition-transform duration-300">Mahasiswa</div>
+              <div className="text-sm text-muted-foreground">status</div>
             </div>
           </div>
         </div>

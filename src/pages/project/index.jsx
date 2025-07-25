@@ -408,12 +408,27 @@ const ProjectPortfolio = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                   Ready to Start Your Next Project?
                 </h2>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm mb-4">
+                  <a 
+                    href="mailto:gedepujaa9@gmail.com"
+                    className="flex items-center gap-2 text-accent hover:text-accent/80 transition-colors duration-300"
+                  >
+                    <Icon name="Mail" size={16} />
+                    gedepujaa9@gmail.com
+                  </a>
+                  <div className="hidden sm:block w-1 h-1 bg-muted-foreground rounded-full" />
+                  <a className="flex items-center gap-2 text-accent hover:text-accent/80 transition-colors duration-300"
+                  >
+                    <Icon name="Phone" size={16} />
+                    +62 85190044083
+                  </a>
+                </div>
                 <p className="text-lg text-muted-foreground mb-8">
                   Mari berkolaborasi untuk menciptakan solusi digital yang inovatif dan berdampak. 
                   Hubungi saya untuk mendiskusikan proyek Anda.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link to="/contact">
+                  {/* <Link to="/contact">
                   <Button
                     variant="default"
                     size="lg"
@@ -423,14 +438,22 @@ const ProjectPortfolio = () => {
                   >
                     Start a Conversation
                   </Button>
-                  </Link>
-                
+                  </Link> */}
                 </div>
               </div>
             </div>
           </section>
         </main>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-card border-t border-border/20 py-8 mt-8">
+        <div className="container-wide px-4">
+          <div className="w-full text-center mb-2">
+            <span className="text-muted-foreground">© 2025 Portfolio Dibuat menggunakan React & Tailwind CSS.</span>
+          </div>
+        </div>
+      </footer>
 
       {selectedProject && (
         <ProjectDetailModal

@@ -65,17 +65,6 @@ const CallToAction = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/contact">
-                  <Button
-                    variant="default"
-                    size="lg"
-                    iconName="MessageCircle"
-                    iconPosition="left"
-                    className="bg-gradient-to-r from-accent to-success hover:from-accent/90 hover:to-success/90 text-background font-semibold px-8 py-4"
-                  >
-                    Mulai Diskusi Proyek
-                  </Button>
-                </Link>
                 <Link to="/project">
                   <Button
                     variant="outline"

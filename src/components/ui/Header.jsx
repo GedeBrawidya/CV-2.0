@@ -15,10 +15,6 @@ const Header = () => {
     { name: 'Portfolio', path: '/project', icon: 'FolderOpen' },
   ];
 
-  const secondaryItems = [
-    { name: 'Contact', path: '/contact-hub-communication-center', icon: 'MessageCircle' }
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -88,7 +84,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/contact">
+            {/* <Link to="/contact">
               <Button 
                 variant="outline" 
                 iconName="MessageCircle" 
@@ -97,7 +93,7 @@ const Header = () => {
               >
                 Let's Connect
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,30 +131,7 @@ const Header = () => {
             ))}
             
             <div className="pt-4 space-y-3 border-t border-border/20">
-              {secondaryItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={closeMenu}
-                  className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-surface/30 hover:text-foreground transition-all duration-300"
-                >
-                  <Icon name={item.icon} size={20} />
-                  <span className="font-medium">{item.name}</span>
-                </Link>
-              ))}
-              
-              <div className="px-4 pt-2 space-y-3">
-                <Button 
-                  fullWidth
-                  variant="outline"
-                  iconName="MessageCircle"
-                  iconPosition="left"
-                  className="border-accent/30 text-accent hover:bg-accent/10"
-                  onClick={closeMenu}
-                >
-                  Let's Connect
-                </Button>
-              </div>
+              {/* Hapus secondaryItems dan button Contact */}
             </div>
           </nav>
         </div>

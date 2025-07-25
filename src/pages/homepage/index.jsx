@@ -19,7 +19,7 @@ const HomepageHeroLanding = () => {
   return (
     <>
       <Helmet>
-        <title>Gede Brawidya Puja Dharma - Full Stack Developer | Portfolio</title>
+        <title>Gede Brawidya Puja Dharma | Portfolio</title>
         <meta 
           name="description" 
           content="HELLO WORLD" 

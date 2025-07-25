@@ -100,7 +100,7 @@ const ProfessionalJourney = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Perjalanan Profesional - Pendidikan & Pengalaman | PortfolioHub</title>
+        <title>Perjalanan - Pendidikan & Pengalaman | Portfolio</title>
         <meta name="description" content="Jelajahi perjalanan pendidikan dan pengalaman profesional saya dalam dunia teknologi. Timeline interaktif dengan pencapaian, sertifikat, dan testimoni." />
         <meta name="keywords" content="pendidikan, pengalaman kerja, karir, teknologi, developer, Indonesia" />
       </Helmet>

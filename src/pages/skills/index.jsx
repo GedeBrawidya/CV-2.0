@@ -280,7 +280,7 @@ const SkillsMatrixTechnicalEcosystem = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Skills Matrix - Technical Ecosystem | PortfolioHub</title>
+        <title>Skills | Portfolio</title>
         <meta name="description" content="Explore my comprehensive technical skills ecosystem with interactive visualizations, proficiency levels, and learning journey documentation." />
         <meta name="keywords" content="technical skills, programming, web development, React, Next.js, TypeScript, Node.js, skill matrix" />
       </Helmet>
@@ -320,14 +320,14 @@ const SkillsMatrixTechnicalEcosystem = () => {
                 <div className="text-sm text-muted-foreground">Expert Level</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-warning mb-2">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-3xl font-bold text-warning mb-2">1+</div>
+                <div className="text-sm text-muted-foreground">Menekuni Coding</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-error mb-2">
                   {skills.reduce((sum, skill) => sum + skill.projectsUsed, 0)}
                 </div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="text-sm text-muted-foreground">Projects Kuliah</div>
               </div>
             </div>
           </div>

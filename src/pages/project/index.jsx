@@ -37,7 +37,7 @@ const ProjectPortfolio = () => {
       githubUrl: "https://github.com/GedeBrawidya/pantauin.git",
       metrics: [
         { label: "Users", value: " 1+" },
-        { label: "Mentors", value: " 3+" }
+        { label: "Mentors", value: " 2+" }
       ],
       challenge: `Membutuhkan sistem monitoring yang efisien untuk pekerja lapangan di berbagai lokasi dengan update real-time dan pelaporan yang mudah.`,
       solution: `Membangun platform berbasis web dengan dashboard monitoring, notifikasi otomatis, dan integrasi data GPS untuk pelacakan pekerja lapangan.`,
@@ -125,7 +125,7 @@ const ProjectPortfolio = () => {
       liveUrl: "#",
       githubUrl: "#",
       metrics: [
-        { label: "Visitors", value: "100+" }
+        { label: "Visitors", value: "1+" }
       ],
       challenge: `Meningkatkan tampilan dan UX dari CV digital tanpa backend/database.`,
       solution: `Menggunakan React.js dan Tailwind untuk UI statis yang mudah diupdate.`,
@@ -164,8 +164,7 @@ const ProjectPortfolio = () => {
       liveUrl: "https://techtona-karang-taruna.vercel.app/",
       githubUrl: "https://github.com/rifkibayuariy/karang-taruna.git",
       metrics: [
-        { label: "Members", value: "50+" },
-        { label: "Events", value: "12+" }
+        { label: "Members", value: "-+" },
       ],
       challenge: `Manajemen kegiatan organisasi yang kompleks dan butuh kolaborasi online.`,
       solution: `Membangun aplikasi web dengan fitur event management, notifikasi, dan dashboard anggota.`,
@@ -254,7 +253,7 @@ const ProjectPortfolio = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-accent/30 border-t-accent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading portfolio...</p>
+          <p className="text-muted-foreground">Loading portfolio</p>
         </div>
       </div>
     );

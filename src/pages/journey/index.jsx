@@ -5,6 +5,7 @@ import TimelineFilter from './components/TimelineFilter';
 import TimelineItem from './components/TimelineItem';
 import StatsOverview from './components/StatsOverview';
 import Icon from '../../components/AppIcon';
+import { Link } from 'react-router-dom';
 
 const ProfessionalJourney = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -178,18 +179,17 @@ const ProfessionalJourney = () => {
               Jangan ragu untuk menghubungi saya.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => window.location.href = '/project'}
-                className="btn-secondary px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+              <Link
+                to="/project"
+                className="btn-secondary flex items-center px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 <Icon name="FolderOpen" size={20} className="mr-2" />
                 Lihat Portfolio
-              </button>
+              </Link>
             </div>
           </div>
         </section>
-      </main>
-
+      </main>    
       {/* Footer */}
       <footer className="bg-card border-t border-border/20">
         <div className="container-wide py-8">

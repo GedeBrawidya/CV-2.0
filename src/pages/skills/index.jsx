@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
+import { Link } from 'react-router-dom';
 import SkillFilter from './components/SkillFilter';
 import SkillNetwork from './components/SkillNetwork';
 import SkillGrid from './components/SkillGrid';
@@ -449,22 +450,13 @@ const SkillsMatrixTechnicalEcosystem = () => {
                 Saya selalu terbuka untuk peluang kolaborasi yang menarik.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  variant="default"
-                  iconName="MessageCircle"
-                  iconPosition="left"
-                  className="bg-gradient-to-r from-accent to-success hover:from-accent/90 hover:to-success/90 text-background"
+                <Link
+                  to="/project"
+                  className="btn-secondary flex items-center px-8 py-3 rounded-lg font-semibold border-accent/30 text-accent hover:bg-accent/10 transition-all duration-300 hover:scale-105"
                 >
-                  Hubungi Saya
-                </Button>
-                <Button 
-                  variant="outline"
-                  iconName="FolderOpen"
-                  iconPosition="left"
-                  className="border-accent/30 text-accent hover:bg-accent/10"
-                >
+                  <Icon name="FolderOpen" size={20} className="mr-2" />
                   Lihat Portfolio
-                </Button>
+                </Link>
               </div>
             </div>
           </div>

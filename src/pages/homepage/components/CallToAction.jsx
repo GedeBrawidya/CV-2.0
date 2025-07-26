@@ -63,25 +63,10 @@ const CallToAction = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/project">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    iconName="Eye"
-                    iconPosition="left"
-                    className="border-accent/30 text-accent hover:bg-accent/10 px-8 py-4"
-                  >
-                    Lihat Case Studies
-                  </Button>
-                </Link>
-              </div>
-
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-border/20">
                 <p className="text-sm text-muted-foreground mb-4">
-                  Atau hubungi saya langsung:
+                hubungi saya langsung:
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
                   <a 
